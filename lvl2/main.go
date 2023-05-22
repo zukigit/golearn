@@ -1,8 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"zuki.com/lvl2/package2"
+)
 
 func main() {
+	package2.ErrorTest()
+}
 
-	fmt.Println("hello lvl 2")
+func Devide() {
+	fmt.Println("-----------------------")
 }
