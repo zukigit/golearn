@@ -7,7 +7,9 @@ import (
 )
 
 func main() {
-	package2.ErrorTest()
+	// package2.ErrorTest("error test")
+	Devide()
+	package2.RoutinesTest("routines test")
 }
 
 func Devide() {
