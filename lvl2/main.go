@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"zuki.com/lvl2/package2"
+	"big.com/lvl2/package2"
 )
 
 func main() {
