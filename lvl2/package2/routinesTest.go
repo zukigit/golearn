@@ -17,8 +17,7 @@ func Loop(message string) {
 func RoutinesTest(message string) {
 	fmt.Println(message)
 
-	wg.Add(3)
-
+	wg.Add(2)
 	go Loop("hi loop")
 
 	go func(msg string) {
