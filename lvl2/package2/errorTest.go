@@ -3,7 +3,6 @@ package package2
 import (
 	"errors"
 	"fmt"
-	"log"
 	"os"
 )
 
@@ -29,12 +28,12 @@ func Error2(errMessage string) error {
 
 func ErrorTest(message string) {
 	fmt.Println(message)
-	f, err := os.Open("D:\\zuki\\Documents\\learn go\\lvl2\\go.mod")
+	f, err := os.Open("D:\\zuki\\Documents\\golearn\\lvl2sd\\go.mod")
 
-	f2, err2 := os.Open("D:\\zuki\\Documents\\learn go\\lvl2\\")
+	f2, err2 := os.Open("D:\\zuki\\Documents\\golearn\\lvlsd2\\")
 
 	if err != nil || err2 != nil {
-		log.Fatal(err)
+		fmt.Println("error is ", err, err2)
 	} else {
 		fmt.Println("file is opened", f)
 		fmt.Println("file is opened", f2)

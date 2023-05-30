@@ -7,9 +7,14 @@ import (
 )
 
 func main() {
-	// package2.ErrorTest("error test")
+	myChannel := make(chan int)
+	package2.ErrorTest("error test")
 	Devide()
 	package2.RoutinesTest("routines test")
+	Devide()
+	go package2.ChannelTest("channel test", myChannel)
+	value := <-myChannel
+	fmt.Println("value from channel:", value)
 }
 
 func Devide() {
