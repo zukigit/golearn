@@ -5,20 +5,17 @@ import (
 	"sync"
 )
 
-var wg sync.WaitGroup
-
-func Loop(message string) {
+func Loop(message string, wg *sync.WaitGroup) {
 	for i := 0; i < 11; i++ {
 		fmt.Println(message, i)
 	}
 	wg.Done()
 }
 
-func RoutinesTest(message string) {
+func RoutinesTest(message string, wg *sync.WaitGroup) {
 	fmt.Println(message)
 
-	wg.Add(2)
-	go Loop("hi loop")
+	go Loop("hi loop", wg)
 
 	go func(msg string) {
 		for i := 0; i < 3; i++ {
