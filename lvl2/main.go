@@ -10,6 +10,7 @@ import (
 func main() {
 	myChannel := make(chan int)
 	myChannel1 := make(chan int, 2)
+	mychannel2 := make(chan string)
 	var wg sync.WaitGroup
 
 	package2.ErrorTest("error test")
@@ -30,7 +31,31 @@ func main() {
 	value1 := <-myChannel1
 	value2 := <-myChannel1
 	fmt.Printf("value1: %d, value2: %d", value1, value2)
+	fmt.Println()
+	Devide()
 
+	go package2.ChannelSyncTest("channel sync test", myChannel)
+	<-myChannel
+	fmt.Println("done")
+	Devide()
+
+	package2.ChannelDirectionTest("channel direction test", mychannel2, &wg)
+	Devide()
+
+	package2.SelectTest("select test")
+	Devide()
+
+	package2.Timeouts("timeout test")
+	Devide()
+
+	package2.NonBlockingChannelTest("Non Blocking Channel Test")
+	Devide()
+
+	package2.RangeOverChannelTest("range over channel test")
+	Devide()
+
+	package2.TimerTest("timer test")
+	Devide()
 }
 
 func Devide() {
