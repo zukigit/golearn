@@ -56,6 +56,9 @@ func main() {
 
 	package2.TimerTest("timer test")
 	Devide()
+
+	package2.TickersTest("ticker test")
+	Devide()
 }
 
 func Devide() {
