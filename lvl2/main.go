@@ -62,7 +62,10 @@ func main() {
 	// package2.WorkerPoolsTest("Worker Pools Test")
 	// Devide()
 
-	package2.WaitGroups("Wait Group test")
+	// package2.WaitGroups("Wait Group test")
+	// Devide()
+
+	package2.RateLimitingTest("Rate Limiting Test")
 	Devide()
 }
 
