@@ -22,7 +22,7 @@ func TickersTest(message string) {
 		}
 	}()
 
-	time.Sleep(time.Second * 2)
+	time.Sleep(time.Second * 4)
 	ticker.Stop()
 	done <- true
 	fmt.Println("ticker is done")

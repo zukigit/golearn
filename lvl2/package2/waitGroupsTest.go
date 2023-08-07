@@ -6,10 +6,10 @@ import (
 	"time"
 )
 
-func worker1(job int) {
-	fmt.Println("job", job, "is doing")
-	time.Sleep(time.Second * 2)
-	fmt.Println("job", job, "is finished")
+func worker1(jobId int) {
+	fmt.Println("job", jobId, "is doing")
+	time.Sleep(time.Second * time.Duration(jobId))
+	fmt.Println("job", jobId, "is finished")
 }
 
 func WaitGroups(msg string) {
@@ -19,7 +19,11 @@ func WaitGroups(msg string) {
 
 	for i := 0; i < 5; i++ {
 		wg.Add(1)
-		defer wg.Done()
-		go worker1(i)
+
+		go func(ii int) {
+			worker1(ii)
+			defer wg.Done()
+		}(i)
 	}
+	wg.Wait()
 }
