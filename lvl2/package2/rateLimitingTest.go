@@ -10,15 +10,18 @@ func RateLimitingTest(msg string) {
 
 	requests := make(chan int, 10)
 
-	for i := 0; i < 10; i++ {
-		requests <- i
-		time.Sleep(time.Second * 2)
-	}
+	go func() {
+		for i := 0; i < 10; i++ {
+			requests <- i
+		}
+		close(requests)
+	}()
 
-	// limit := time.Tick(time.Second * 2)
+	limit := time.Tick(time.Second * 2)
 
 	for reqs := range requests {
-		// <-limit
+		<-limit
 		fmt.Println("request", reqs, time.Now())
 	}
+	fmt.Println("loop is done")
 }
