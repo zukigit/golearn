@@ -68,7 +68,10 @@ func main() {
 	// package2.RateLimitingTest("Rate Limiting Test")
 	// Devide()
 
-	package2.AtomicCounterTest("Atomic Counter Test")
+	// package2.AtomicCounterTest("Atomic Counter Test")
+	// Devide()
+
+	package2.MutexesTest("Mutexes Test")
 	Devide()
 }
 
