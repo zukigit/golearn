@@ -65,7 +65,10 @@ func main() {
 	// package2.WaitGroups("Wait Group test")
 	// Devide()
 
-	package2.RateLimitingTest("Rate Limiting Test")
+	// package2.RateLimitingTest("Rate Limiting Test")
+	// Devide()
+
+	package2.AtomicCounterTest("Atomic Counter Test")
 	Devide()
 }
 
