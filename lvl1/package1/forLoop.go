@@ -2,8 +2,8 @@ package package1
 
 import "fmt"
 
-func ForLoop() {
-	fmt.Println()
+func ForLoop(name string) {
+	fmt.Println(name)
 	fmt.Println("forLoop")
 	var i, j = 0, 0
 
