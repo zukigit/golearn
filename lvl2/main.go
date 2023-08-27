@@ -71,7 +71,10 @@ func main() {
 	// package2.AtomicCounterTest("Atomic Counter Test")
 	// Devide()
 
-	package2.MutexesTest("Mutexes Test")
+	// package2.MutexesTest("Mutexes Test")
+	// Devide()
+
+	package2.StatefulTest("Stateful Goroutines Test")
 	Devide()
 }
 
