@@ -74,7 +74,10 @@ func main() {
 	// package2.MutexesTest("Mutexes Test")
 	// Devide()
 
-	package2.StatefulTest("Stateful Goroutines Test")
+	// package2.StatefulTest("Stateful Goroutines Test")
+	// Devide()
+
+	package2.SortingTest("Sorting Test")
 	Devide()
 }
 
